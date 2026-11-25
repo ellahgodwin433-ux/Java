@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Level 6 JavaScript Tasks</title>
+</head>
+<body>
+
+    <h1>Level 6: Arrays</h1>
+
+    <script>
+
+        // TASK 1: CREATE A FRUIT ARRAY
+
+        let fruits = ["Apple", "Mango", "Orange", "Banana", "Pineapple"];
+
+        console.log(fruits);
+
+
+        // TASK 2: ACCESS ARRAY ELEMENTS
+
+        console.log(fruits[0]);
+
+        console.log(fruits[fruits.length - 1]);
+
+        console.log(fruits.length);
+
+
+        // TASK 3: ADD AND REMOVE ELEMENTS
+
+        let colors = ["Red", "Blue", "Green"];
+
+        colors.push("Yellow");
+        console.log(colors);
+
+        colors.unshift("Black");
+        console.log(colors);
+
+        colors.pop();
+        console.log(colors);
+
+        colors.shift();
+        console.log(colors);
+
+
+        // TASK 4: LOOP THROUGH AN ARRAY
+
+        let numbers = [1, 2, 3, 4, 5];
+
+        for (let i = 0; i < numbers.length; i++) {
+            console.log(numbers[i] * 2);
+        }
+
+
+        // TASK 5: FIND AN ELEMENT IN AN ARRAY
+
+        let names = ["David", "John", "Michael", "James", "Peter"];
+
+        let searchName = "Michael";
+
+        let found = false;
+
+        for (let i = 0; i < names.length; i++) {
+
+            if (names[i] === searchName) {
+                found = true;
+                break;
+            }
+
+        }
+
+        if (found) {
+            console.log(searchName + " found!");
+        }
+        else {
+            console.log(searchName + " not found.");
+        }
+
+    </script>
+
+</body>
+</html>

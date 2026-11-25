@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Level 5 JavaScript Tasks</title>
+</head>
+<body>
+
+    <h1>Level 5: Objects</h1>
+
+    <script>
+
+        // TASK 1: CREATE A BOOK OBJECT
+
+        let book = {
+            title: "Rich Dad Poor Dad",
+            author: "Robert Kiyosaki",
+            year: 1997,
+            pages: 336
+        };
+
+        console.log(book);
+
+
+        // TASK 2: ACCESS OBJECT PROPERTIES
+
+        console.log(book.title);
+
+        console.log(book["author"]);
+
+        console.log(book.title + " was written by " + book.author + " in " + book.year + ".");
+
+
+        // TASK 3: ADD AND UPDATE PROPERTIES
+
+        let person = {};
+
+        person.name = "David";
+
+        person.age = 24;
+
+        person.age = 25;
+
+        person.city = "Abuja";
+
+        console.log(person);
+
+
+        // TASK 4: OBJECT WITH METHODS
+
+        let calculator = {
+            num1: 20,
+            num2: 10,
+
+            add: function() {
+                return this.num1 + this.num2;
+            },
+
+            subtract: function() {
+                return this.num1 - this.num2;
+            }
+        };
+
+        console.log(calculator.add());
+
+        console.log(calculator.subtract());
+
+
+        // TASK 5: ITERATE OVER OBJECT PROPERTIES
+
+        let car = {
+            make: "Toyota",
+            model: "Camry",
+            year: 2022,
+            color: "Black"
+        };
+
+        for (let property in car) {
+            console.log(property + ": " + car[property]);
+        }
+
+    </script>
+
+</body>
+</html>

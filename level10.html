@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Level 10 - Challenge Tasks</title>
+</head>
+<body>
+
+<script>
+
+// TASK 1: Palindrome Checker
+
+function isPalindrome(str) {
+    let cleaned = str.toLowerCase().replaceAll(" ", "");
+    let reversed = "";
+
+    for (let i = cleaned.length - 1; i >= 0; i--) {
+        reversed += cleaned[i];
+    }
+
+    return cleaned === reversed;
+}
+
+console.log("Palindrome:", isPalindrome("Madam"));
+
+
+// TASK 2: Simple Shopping Cart
+
+let cart = [
+    { item: "Shoes", price: 25000 },
+    { item: "Shirt", price: 10000 },
+    { item: "Watch", price: 15000 }
+];
+
+function calculateTotal(cart) {
+    let total = 0;
+
+    for (let i = 0; i < cart.length; i++) {
+        total += cart[i].price;
+    }
+
+    return total;
+}
+
+console.log("Cart total:", calculateTotal(cart));
+
+
+// TASK 3: Remove Duplicates from Array
+
+let numbers = [1, 2, 3, 2, 4, 1, 5, 3];
+
+function removeDuplicates(arr) {
+    let uniqueNumbers = [];
+
+    for (let i = 0; i < arr.length; i++) {
+        if (!uniqueNumbers.includes(arr[i])) {
+            uniqueNumbers.push(arr[i]);
+        }
+    }
+
+    return uniqueNumbers;
+}
+
+console.log("Unique numbers:", removeDuplicates(numbers));
+
+
+// TASK 4: Generate Random Number Game
+
+function playGame(guess) {
+    let randomNumber = Math.floor(Math.random() * 10) + 1;
+
+    console.log("Random number:", randomNumber);
+
+    if (guess === randomNumber) {
+        return "You guessed it!";
+    } 
+    else if (guess > randomNumber) {
+        return "Too high!";
+    } 
+    else {
+        return "Too low!";
+    }
+}
+
+console.log("Game result:", playGame(5));
+
+
+// TASK 5: Simple To-Do List
+
+let tasks = [];
+
+function addTask(task) {
+    tasks.push(task);
+}
+
+function removeTask(index) {
+    tasks.splice(index, 1);
+}
+
+function listTasks() {
+    for (let i = 0; i < tasks.length; i++) {
+        console.log(i, tasks[i]);
+    }
+}
+
+addTask("Learn JavaScript");
+addTask("Practice coding");
+addTask("Build a website");
+addTask("Learn HTML");
+
+removeTask(1);
+
+console.log("My To-Do List:");
+listTasks();
+
+
+// TASK 6: Bank Account
+
+let bankAccount = {
+    owner: "David",
+    balance: 50000,
+
+    deposit(amount) {
+        this.balance += amount;
+    },
+
+    withdraw(amount) {
+        if (amount <= this.balance) {
+            this.balance -= amount;
+        } else {
+            console.log("Insufficient funds");
+        }
+    },
+
+    checkBalance() {
+        console.log("Current balance:", this.balance);
+    }
+};
+
+bankAccount.deposit(20000);
+bankAccount.withdraw(10000);
+bankAccount.checkBalance();
+
+
+// TASK 7: Count Occurrences
+
+let letters = ["a", "b", "a", "c", "b", "a"];
+
+function countOccurrences(arr, letter) {
+    let count = 0;
+
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] === letter) {
+            count++;
+        }
+    }
+
+    return count;
+}
+
+console.log("Occurrences of a:", countOccurrences(letters, "a"));
+
+
+// TASK 8: Filter by Age
+
+let people = [
+    { name: "David", age: 24 },
+    { name: "John", age: 16 },
+    { name: "Sarah", age: 21 },
+    { name: "Peter", age: 14 },
+    { name: "Mary", age: 30 }
+];
+
+function filterAdults(people) {
+    let adults = [];
+
+    for (let i = 0; i < people.length; i++) {
+        if (people[i].age >= 18) {
+            adults.push(people[i]);
+        }
+    }
+
+    return adults;
+}
+
+console.log("Adults:", filterAdults(people));
+
+
+// TASK 9: Multiplication Table (Nested Loop)
+
+for (let i = 1; i <= 10; i++) {
+    let row = "";
+
+    for (let j = 1; j <= 10; j++) {
+        row += (i * j) + " ";
+    }
+
+    console.log(row);
+}
+
+
+// TASK 10: Simple Gradebook
+
+let gradebook = {
+    grades: [70, 85, 90, 65, 80],
+
+    addGrade(grade) {
+        this.grades.push(grade);
+    },
+
+    getAverage() {
+        let total = 0;
+
+        for (let i = 0; i < this.grades.length; i++) {
+            total += this.grades[i];
+        }
+
+        return total / this.grades.length;
+    },
+
+    getMin() {
+        let min = this.grades[0];
+
+        for (let i = 1; i < this.grades.length; i++) {
+            if (this.grades[i] < min) {
+                min = this.grades[i];
+            }
+        }
+
+        return min;
+    },
+
+    getMax() {
+        let max = this.grades[0];
+
+        for (let i = 1; i < this.grades.length; i++) {
+            if (this.grades[i] > max) {
+                max = this.grades[i];
+            }
+        }
+
+        return max;
+    }
+};
+
+gradebook.addGrade(95);
+
+console.log("Average grade:", gradebook.getAverage());
+console.log("Minimum grade:", gradebook.getMin());
+console.log("Maximum grade:", gradebook.getMax());
+
+</script>
+
+</body>
+</html>

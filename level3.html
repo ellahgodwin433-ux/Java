@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Level 3 JavaScript Tasks</title>
+</head>
+<body>
+
+    <h1>Level 3: Conditionals</h1>
+
+    <script>
+
+        // TASK 1: GRADE CALCULATOR
+
+        let score = 85;
+        let grade;
+
+        if (score >= 90) {
+            grade = "A";
+        }
+        else if (score >= 80) {
+            grade = "B";
+        }
+        else if (score >= 70) {
+            grade = "C";
+        }
+        else if (score >= 60) {
+            grade = "D";
+        }
+        else {
+            grade = "F";
+        }
+
+        console.log("Your grade is " + grade);
+
+
+        // TASK 2: NUMBER GUESSING GAME
+
+        let secretNumber = 7;
+        let guess = 5;
+
+        if (guess === secretNumber) {
+            console.log("Congratulations! You guessed it!");
+        }
+        else if (guess > secretNumber) {
+            console.log("Too high! Try again.");
+        }
+        else {
+            console.log("Too low! Try again.");
+        }
+
+
+        // TASK 3: LEAP YEAR CHECKER
+
+        let year = 2024;
+
+        let isLeapYear;
+
+        if (year % 400 === 0) {
+            isLeapYear = true;
+        }
+        else if (year % 100 === 0) {
+            isLeapYear = false;
+        }
+        else if (year % 4 === 0) {
+            isLeapYear = true;
+        }
+        else {
+            isLeapYear = false;
+        }
+
+        console.log(year + " is a leap year? " + isLeapYear);
+
+
+        // TASK 4: TRAFFIC LIGHT SYSTEM
+
+        let lightColor = "green";
+        let action;
+
+        if (lightColor === "red") {
+            action = "Stop";
+        }
+        else if (lightColor === "yellow") {
+            action = "Slow down";
+        }
+        else if (lightColor === "green") {
+            action = "Go";
+        }
+        else {
+            action = "Invalid color";
+        }
+
+        console.log(action);
+
+
+        // TASK 5: SIMPLE ATM WITHDRAWAL
+
+        let balance = 5000;
+        let withdrawalAmount = 2000;
+        let newBalance;
+
+        if (withdrawalAmount > balance) {
+            console.log("Insufficient funds.");
+        }
+        else if (withdrawalAmount <= 0) {
+            console.log("Invalid amount.");
+        }
+        else {
+            newBalance = balance - withdrawalAmount;
+
+            console.log("Withdrawal successful! New balance: " + newBalance);
+        }
+
+    </script>
+
+</body>
+</html>

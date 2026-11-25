@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Level 2 JavaScript Tasks</title>
+</head>
+<body>
+
+    <h1>Level 2: Comparison and Logical Operators</h1>
+
+    <script>
+
+        // TASK 1: ELIGIBILITY CHECKER
+
+        let age = 24;
+
+        let canVote = age >= 18;
+
+        console.log("Is this person eligible to vote? " + canVote);
+
+
+        // TASK 2: TEMPERATURE ADVICE
+
+        let temperature = 25;
+        let advice;
+
+        if (temperature > 30) {
+            advice = "It's hot, stay hydrated!";
+        } 
+        else if (temperature < 10) {
+            advice = "It's cold, wear a jacket!";
+        } 
+        else {
+            advice = "The weather is pleasant.";
+        }
+
+        console.log(advice);
+
+
+        // TASK 3: PASSWORD STRENGTH CHECKER
+
+        let password = "DavidBrooks123";
+
+        let passwordLength = password.length;
+
+        let isValidLength = passwordLength > 8 && passwordLength < 20;
+
+        console.log("Is the password length valid? " + isValidLength);
+
+
+        // TASK 4: WEEKEND DETECTOR
+
+        let day = "Saturday";
+
+        let isWeekend = day === "Saturday" || day === "Sunday";
+
+        console.log("Is it the weekend? " + isWeekend);
+
+
+
+
+        // TASK 5: DISCOUNT ELIGIBILITY
+
+        let isMember = true;
+        let purchaseAmount = 80;
+
+        let getsDiscount = isMember || purchaseAmount > 100;
+
+        console.log("Does the user get a discount? " + getsDiscount);
+
+
+    </script>
+
+</body>
+</html>

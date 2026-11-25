@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Level 8 - Combining Concepts</title>
+</head>
+<body>
+
+    <script>
+
+        // Task 1: Array of Objects
+
+        let students = [
+            { name: "David", grade: "A" },
+            { name: "John", grade: "B" },
+            { name: "Sarah", grade: "A" }
+        ];
+
+        for (let i = 0; i < students.length; i++) {
+            console.log(students[i].name, students[i].grade);
+        }
+
+
+        // Task 2: Function with Array Parameter
+
+        function calculateAverage(numbers) {
+            let sum = 0;
+
+            for (let i = 0; i < numbers.length; i++) {
+                sum += numbers[i];
+            }
+
+            return sum / numbers.length;
+        }
+
+        let numbers = [10, 20, 30, 40, 50];
+
+        console.log("Average:", calculateAverage(numbers));
+
+
+        // Task 3: Filtering with Conditionals
+
+        let ages = [12, 17, 18, 21, 25, 15, 30];
+
+        for (let i = 0; i < ages.length; i++) {
+            if (ages[i] >= 18) {
+                console.log(ages[i]);
+            }
+        }
+
+
+        // Task 4: Object with Array Property
+
+        let classroom = {
+            teacher: "Mr. James",
+            students: ["David", "John", "Sarah", "Peter"]
+        };
+
+        function listStudents(classroom) {
+            for (let i = 0; i < classroom.students.length; i++) {
+                console.log(classroom.students[i]);
+            }
+        }
+
+        listStudents(classroom);
+
+
+        // Task 5: Function Returning Object
+
+        function createPerson(name, age, city) {
+            return {
+                name: name,
+                age: age,
+                city: city
+            };
+        }
+
+        let person = createPerson("David", 24, "Abuja");
+
+        console.log(person);
+
+    </script>
+
+</body>
+</html>
